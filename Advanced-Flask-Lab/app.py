@@ -21,16 +21,22 @@ posts = {
 
 
 #####
-
+image_link = "https://uploads-ssl.webflow.com/5dd64bd3a930f9d04abd1363/5de254f85f1762feee30d664_meet_logo_red.png"
+user_bio = "Middle East Entrepreneurs of Tomorrow. Enabling the next generation of Israeli and Palestinian leaders."
 
 @app.route('/')  # '/' for the default page
 def home():
-    return render_template('index.html')
+    return render_template('index.html',imglin = image_link ,usr_bi= user_bio, posts = posts)
+    
+    
 
 
 @app.route('/about')  # '/' for the default page
 def about():
     return render_template('about.html')
+
+
+
 
 
 if __name__ == "__main__":  # Makes sure this is the main process
